@@ -1,0 +1,38 @@
+{
+  "name": "cordova-plugin-idfaios",
+  "version": "2.0.0",
+  "description": "Cordova plugin for getting Advertising ID (IDFA or AAID)",
+  "types": "./types/index.d.ts",
+  "cordova": {
+    "id": "cordova-plugin-idfaios",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/j-xhesi/cordova-plugin-idfaios.git"
+  },
+  "author": "Maksim Chemerisuk <chemerisuk@gmail.com> (https://github.com/chemerisuk)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/j-xhesi/cordova-plugin-idfaios/issues"
+  },
+  "homepage": "https://github.com/j-xhesi/cordova-plugin-idfaios#readme",
+  "funding": "https://github.com/j-xhesi/cordova-plugin-idfaios?sponsor=1",
+  "keywords": [
+    "cordova",
+    "IFA",
+    "IDFA",
+    "AAID",
+    "Advertising ID",
+    "analytics",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "scripts": {
+    "version": "perl -p -i -e 's/(version=)\"\\d+\\.\\d+\\.\\d+\"/$1\"'$npm_package_version'\"$2/' plugin.xml && git add plugin.xml",
+    "postversion": "git push && git push --tags"
+  }
+}

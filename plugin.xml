@@ -1,0 +1,36 @@
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+xmlns:android="http://schemas.android.com/apk/res/android"
+           id="cordova-plugin-idfaios"
+      version="2.0.0">
+
+    <name>cordova-plugin-idfaios</name>
+    <description>Cordova plugin to get Advertising ID (IDFA or AAID)</description>
+    <license>MIT</license>
+    <keywords>cordova</keywords>
+    <repo>https://github.com/j-xhesi/cordova-plugin-idfaios</repo>
+    <issue>https://github.com/j-xhesi/cordova-plugin-idfaios/issues</issue>
+
+    <js-module src="www/Idfa.js" name="Idfa">
+        <merges target="cordova.plugins.idfa" />
+    </js-module>
+
+    <engines>
+        <engine name="cordova" version=">=7.1.0"/>
+        <engine name="cordova-ios" version=">=4.3.0"/>
+    </engines>
+
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Idfa">
+                <param name="ios-package" value="IdfaPlugin" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/IdfaPlugin.h" />
+        <source-file src="src/ios/IdfaPlugin.m" />
+
+        <framework src="AdSupport.framework" weak="true" />
+        <framework src="AppTrackingTransparency.framework" weak="true" />
+    </platform>
+
+</plugin>
